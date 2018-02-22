@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7d01255f-83fa-44cb-ab7f-8507c5dafe4a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -301,7 +300,7 @@
       <workItem from="1519247328323" duration="274000" />
       <workItem from="1519247763403" duration="1607000" />
       <workItem from="1519326766001" duration="1056000" />
-      <workItem from="1519329616817" duration="57000" />
+      <workItem from="1519329616817" duration="96000" />
     </task>
     <task id="LOCAL-00001" summary="updated readme removed .idea">
       <created>1519329424023</created>
@@ -324,11 +323,18 @@
       <option name="project" value="LOCAL" />
       <updated>1519329523080</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Merge branch 'master' of https://github.com/avim101/recongate&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <created>1519329679359</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1519329679359</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3161000" />
+    <option name="totallyTimeSpent" value="3200000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="0" />
