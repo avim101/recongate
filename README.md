@@ -11,12 +11,22 @@ recongate/
     index.html
     favicon.ico
   src/
+    components/
+      Img/
+        Img.tsx
+      ProfileImage/
+          ImageNotAvailable/
+              ImageNotAvailable.scss
+              ImageNotAvailable.tsx
+          ProfileImage.scss
+          ProfileImage.tsx        
     App.css
     App.js
     App.test.js
     index.css
     index.js
     logo.svg
+    variables.scss
 ```
 
 For the project to build, **these files must exist with exact filenames**:
@@ -34,6 +44,10 @@ Read instructions below for using assets from JavaScript and HTML.
 
 You can, however, create more top-level directories.<br>
 They will not be included in the production build so you can use them for things like documentation.
+
+## Run Project
+before you can see the project yo need to bring all the dependencies.
+in terminal run `npm install` or `yarn install` then you can run `yarn start` or `npm start` see the section below 
 
 ## Available Scripts
 
@@ -61,14 +75,3 @@ The build is minified and the filenames include the hashes.<br>
 Your app is ready to be deployed!
 
 See the section about [deployment](#deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
