@@ -1,0 +1,21 @@
+@import '../../../variables.scss';
+
+.ImageNotAvailable{
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  text-align: center;
+  display: flex;
+  background-color: $black;
+  color: $white;
+  float: left;
+  transition: 0.6s linear;
+}
+
+.ImageNotAvailable{
+  &.active{
+    background-color: $yellow;
+    color: $black;
+    transition: 0.6s linear;
+  }
+}
