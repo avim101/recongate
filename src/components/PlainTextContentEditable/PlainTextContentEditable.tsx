@@ -57,13 +57,13 @@ class PlainTextContentEditable extends React.PureComponent<IPlainTextContentEdit
 
     }
 
-    onPaste(e: React.ClipboardEvent<HTMLDivElement>) {
+    onPaste(e: React.ClipboardEvent<HTMLDivElement>): void {
         e.preventDefault();
         const text = e.clipboardData.getData('text');
         document.execCommand('insertText', false, text);
     }
 
-    getClassName() {
+    getClassName(): string {
         const placeholder = this.state.text === '' ? 'PlainTextContentEditable-has-placeholder' : '';
         return `PlainTextContentEditable ${placeholder} ${this.props.className}`;
     }
