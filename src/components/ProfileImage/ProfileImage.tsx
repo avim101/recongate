@@ -4,16 +4,16 @@ import Img from '../Img/Img';
 import ImageNotAvailable from './ImageNotAvailable/ImageNotAvailable';
 import './ProfileImage.css';
 
-export interface IprofileImage {
+export interface IProfileImage {
     imageSrc?: string;
     userName: string;
     size: string;
     id: number;
 
-    onClick?(e: React.SyntheticEvent<HTMLElement>): void;
+    onClick?: (e: React.SyntheticEvent<HTMLElement>) => void;
 }
 
-interface IprofileImageState {
+interface IProfileImageState {
     active: boolean;
 }
 
@@ -23,9 +23,13 @@ export enum ProfileImageSize {
     l = 110
 }
 
-export class ProfileImage extends React.PureComponent<IprofileImage, IprofileImageState> {
+export class ProfileImage extends React.PureComponent<IProfileImage, IProfileImageState> {
 
-    public state: IprofileImageState = {
+    public static defaultProps: Partial<IProfileImage> = {
+        imageSrc: '',
+    };
+
+    public state: IProfileImageState = {
         active: false
     };
 
@@ -40,7 +44,7 @@ export class ProfileImage extends React.PureComponent<IprofileImage, IprofileIma
         }
     }
 
-    render() {
+    render(): JSX.Element {
         return (
             <React.Fragment>
                 {!!this.props.imageSrc ?

@@ -4,10 +4,10 @@ interface Iimg {
     alt?: string;
     height?: number;
     width?: number;
-    src: string | null;
+    src: string;
     className?: string;
 
-    onClick?(e: React.SyntheticEvent<HTMLImageElement>): void;
+    onClick?: (e: React.SyntheticEvent<HTMLImageElement>) => void;
 }
 
 const Img: React.StatelessComponent<Iimg> = (props: Iimg) => {

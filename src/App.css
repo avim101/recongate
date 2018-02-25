@@ -21,7 +21,7 @@
   font-size: large;
 }
 
-.App .profile-images-container{
+.App .center-content{
   display: flex;
   align-items: center;
   justify-content: center;

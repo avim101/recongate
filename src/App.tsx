@@ -1,9 +1,10 @@
 import * as React from 'react';
-import { IprofileImage, ProfileImage } from './components/ProfileImage/ProfileImage';
+import { IProfileImage, ProfileImage } from './components/ProfileImage/ProfileImage';
 import './App.css';
+import PlainTextContentEditable from './components/PlainTextContentEditable/PlainTextContentEditable';
 
 interface IAppState {
-    profileImages: Array<IprofileImage>;
+    profileImages: Array<IProfileImage>;
 }
 
 class App extends React.PureComponent<{}, IAppState> {
@@ -46,7 +47,7 @@ class App extends React.PureComponent<{}, IAppState> {
         ]
     };
 
-    render() {
+    render(): JSX.Element {
         return (
             <div className="App">
                 <header className="App-header">
@@ -57,10 +58,13 @@ class App extends React.PureComponent<{}, IAppState> {
                         Avi Maslati
                     </h1>
                 </header>
-                <div className="profile-images-container">
-                    {this.state.profileImages.map((profileImage: IprofileImage) => (
+                <div className="center-content">
+                    {this.state.profileImages.map((profileImage: IProfileImage) => (
                         <ProfileImage {...profileImage} key={profileImage.id}/>
                     ))}
+                </div>
+                <div className="center-content">
+                    <PlainTextContentEditable minRows={15} maxRows={15} style={{width: '500px'}}/>
                 </div>
             </div>
         );

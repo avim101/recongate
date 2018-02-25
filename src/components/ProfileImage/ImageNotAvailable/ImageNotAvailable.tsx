@@ -2,12 +2,12 @@ import * as React from 'react';
 import { ProfileImageSize } from '../ProfileImage';
 import './ImageNotAvailable.css';
 
-interface IimageNotAvailable {
+interface IImageNotAvailable {
     size: string;
     active: boolean;
     className?: string;
 
-    onClick?(e: React.SyntheticEvent<HTMLSpanElement>): void;
+    onClick?: (e: React.SyntheticEvent<HTMLSpanElement>) => void;
 }
 
 enum FontSize {
@@ -16,7 +16,7 @@ enum FontSize {
     l = '1.2em'
 }
 
-const ImageNotAvailable: React.StatelessComponent<IimageNotAvailable> = (props: IimageNotAvailable) => {
+const ImageNotAvailable: React.StatelessComponent<IImageNotAvailable> = (props: IImageNotAvailable) => {
 
     return (
         <div
