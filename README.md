@@ -19,7 +19,10 @@ recongate/
               ImageNotAvailable.scss
               ImageNotAvailable.tsx
           ProfileImage.scss
-          ProfileImage.tsx        
+          ProfileImage.tsx
+      PlainTextContentEditable/
+        PlainTextContentEditable.scss
+        PlainTextContentEditable.tsx
     App.css
     App.js
     App.test.js
