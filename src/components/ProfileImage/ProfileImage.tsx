@@ -1,5 +1,6 @@
 import * as React from 'react';
 import isFunction from 'lodash/isFunction';
+import ReactTooltip from 'react-tooltip';
 import Img from '../Img/Img';
 import ImageNotAvailable from './ImageNotAvailable/ImageNotAvailable';
 import './ProfileImage.css';
@@ -47,27 +48,30 @@ export class ProfileImage extends React.PureComponent<IProfileImage, IProfileIma
     render(): JSX.Element {
         return (
             <React.Fragment>
-                {!!this.props.imageSrc ?
-                    (
-                        <Img
-                            key={this.props.id}
-                            className={'ProfileImage ' + (this.state.active === true ? 'active' : '')}
-                            src={this.props.imageSrc}
-                            width={ProfileImageSize[this.props.size] - 5}
-                            height={ProfileImageSize[this.props.size] - 5}
-                            onClick={(e) => this.handleImgClick(e)}
-                        />
-                    )
-                    :
-                    (
-                        <ImageNotAvailable
-                            key={this.props.id}
-                            size={this.props.size}
-                            active={this.state.active}
-                            onClick={(e) => this.handleImgClick(e)}
-                        />
-                    )
-                }
+                <a data-for="userName" data-tip={this.props.userName}>
+                    {!!this.props.imageSrc ?
+                        (
+                            <Img
+                                key={this.props.id}
+                                className={'ProfileImage ' + (this.state.active === true ? 'active' : '')}
+                                src={this.props.imageSrc}
+                                width={ProfileImageSize[this.props.size] - 5}
+                                height={ProfileImageSize[this.props.size] - 5}
+                                onClick={(e) => this.handleImgClick(e)}
+                            />
+                        )
+                        :
+                        (
+                            <ImageNotAvailable
+                                key={this.props.id}
+                                size={this.props.size}
+                                active={this.state.active}
+                                onClick={(e) => this.handleImgClick(e)}
+                            />
+                        )
+                    }
+                </a>
+                <ReactTooltip place="bottom" type="dark" effect="solid" id="userName"/>
             </React.Fragment>
         );
     }
